@@ -1,0 +1,340 @@
+*{
+    font-family: Microsoft Yahei;
+    padding:0;
+    margin:0;
+    list-style: none;
+}
+.main-title{
+    height:30px;
+    line-height: 30px;
+    font-size: 18px;
+    text-align: center;
+    color:#fff;
+    background-color:#666;
+}
+body{
+    background-color:#eee ;
+}
+.part-above{
+    height:580px;
+}
+.part-below{
+    height:230px;
+    background-color: #999;
+    width:1500px;
+}
+.search-suggest{
+    width: 155px;
+    z-index:1;
+    left:185px;
+    /*margin-top: 41px;*/
+    background-color: #fff;
+    position: relative;
+    top:40px;
+}
+.search-suggest>div{
+    cursor: pointer;
+    padding:0 5px;
+}
+#sidebar_content{
+    margin:0;
+    width:230px;
+}
+.div-a {
+    position: relative;
+    z-index: 10;
+    float: left;
+    width: 800px;
+    height:600px;
+}
+.div-a-2{
+    position: relative;
+    z-index: 10;
+    float: left;
+    width: 10px;
+}
+.item_normal{
+    background-color: inherit;
+}
+.item_high{
+    background-color: #999;
+    color:#eee;
+}
+.car_date{
+    height:140px;
+    overflow: auto;
+    text-align: left;
+    display: none;
+}
+#KProvince{
+    width: 80px;
+    padding:2px 5px;
+    display: block;
+    height:25px;
+    font-size: 12px;
+    border:1px solid #999;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    float: left;
+}
+#KProvince:focus{
+    outline:none;border-color:rgba(169,189,124,.75);
+    box-shadow:0 0 10px rgba(169,189,124,.105);
+    -moz-box-shadow:0 0 10px rgba(169,189,124,.5);
+    -webkit-box-shadow:0 0 10px rgba(195,209,163,3);
+}
+.input_place{
+    height:55px;
+}
+.input_title{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.car_list_title,.place_list_title{
+    background-color:#999 ;
+    color:#eee;
+    font-size: 16px;
+    padding:5px;
+    text-align: left;
+}
+.car_list_box,.place_list_box{
+    padding:5px 10px 5px 10px;
+    color:#999;
+}
+.car_list_box{
+    height: 31.3%;
+}
+.submit_btn{
+    background-color:#999 ;
+    color:#eee;
+    border: 1px solid #999;
+    display: block;
+    height:25px;
+    padding:2px 5px;
+    float: left;
+    -webkit-border-radius: 2px
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    margin-left:10px;
+}
+#sidebar_loader{
+    position: absolute;
+    top:120px;
+    left:0;
+}
+.clearfloat:after
+{
+    display:block;
+    clear:both;
+    content:"";
+    visibility:hidden;
+    height:0
+}
+.clearfloat
+{
+    zoom:1
+}
+.place_list_box{
+    height:215px;
+    overflow: auto;
+    font-size: 14px;
+}
+.place_list_box div{
+    cursor:pointer;
+    border-bottom:1px solid #999;
+    padding:5px;
+    width:100%;
+}
+#roadList ul{
+    margin-top:10px;
+}
+.place_list_box li{
+    position: relative;
+}
+.place_list_box label{
+    display: inline-block;
+    cursor: pointer;
+    margin-left:15px;
+    font-size: 14px;
+    font-weight: normal;
+    color:#999;
+}
+.place_list_box input[type="checkbox"] {
+    display: none;
+}
+.place_list_box label:before{
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    border:1px solid #999;
+    background-color: #eee;
+}
+.place_list_box input[type="checkbox"]:checked+label:before{
+    content:"\2713";
+    color:#999;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+}
+#carLabelList{
+    height:215px;
+    overflow: auto;
+    color:#999;
+    font-size: 14px;
+    line-height: 20px;
+}
+#carLabelList>ul>li>ul{
+    display:none;
+    margin-left: 10px;
+    font-size: 12px;
+}
+#carLabelList li{
+    cursor: pointer;
+    font-size:12px;
+}
+#carLabelList>ul>li>ul li:hover{
+    text-decoration: underline;
+}
+.car_date label{
+    display: inline-block;
+    cursor: pointer;
+    margin-left:12px;
+    font-size: 12px;
+    font-weight: normal;
+    color:#999;
+}
+.car_date input[type="checkbox"] {
+    display: none;
+}
+.car_date label:before{
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border:1px solid #999;
+    background-color: #eee;
+    position: relative;
+    top:1px;
+    left:-2px;
+}
+.car_date input[type="checkbox"]:checked+label:before{
+    content:"\2713";
+    color:#999;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+}
+.show_poi_btn a{
+    background-color:#999 ;
+    color:#eee;
+    border: 1px solid #999;
+    display: block;
+    padding:0 5px;
+    height:25px;
+    line-height: 25px;
+    text-align: center;
+    float: left;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    text-decoration: none;
+    margin-top:10px;
+}
+.road_view_title span{
+    font-size:14px;
+    line-height:20px;
+    color:#999;
+    font-weight: bold;
+    border-bottom: 1px solid #999;
+}
+.road_view_title{
+    margin:5px 0;
+}
+.below_chord{
+    height:28%;
+    width:100%;
+    float: left;
+    background-color: #eee;
+}
+.below_line{
+    float: left;
+}
+.right_bar{
+    float: right;
+    width:230px;
+}
+#checkPlaces{
+    margin-top: 10px;
+}
+.show_poi{
+    height:90px;
+}
+.choose_C_S_box{
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    border:1px solid #999;
+    width:218px;
+}
+.choose_C_S{
+    text-align: center;
+    font-size: 10px;
+    color:#999;
+    cursor: pointer;
+    float: left;
+    width: 72px;
+}
+.border_right{
+    border-right:1px solid #999;
+}
+.choose_C_S.active{
+    background-color: #999;
+    color:#eee;
+}
+.district_color_bar{
+    margin-top:45px;
+}
+.jinniu-color{
+    background-color: #78A575;
+}
+.jinjiang-color{
+    background-color: #E581AD;
+}
+.qingyang-color{
+    background-color: #FEA27A;
+}
+.wuhou-color{
+    background-color: #8D6FAA;
+}
+.chenghua-color{
+    background-color: #758CB6;
+}
+.district_color_bar>div{
+    color:#999;
+    width:80px;
+    padding:5px 0;
+    float: left;
+    text-align: left;
+    font-size: 12px;
+    margin-right:10px;
+}
+.district_color_bar span{
+    margin-right:2px;
+    display: inline-block;
+    width: 12px;
+    height:12px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.pieChart {
+  width: 100%;
+  height: 28%;
+  background-color: #eee;
+}

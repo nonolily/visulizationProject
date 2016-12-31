@@ -1,0 +1,129 @@
+<html>
+<head>
+<title>Social Media Vis</title>
+<link rel="stylesheet" type="text/css" href="/bower_components/semantic/dist/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/lib/ol.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/lib/jquery.datetimepicker.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+<link rel="stylesheet" type="text/css" href="/stylesheets/dragbox.css">
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/semantic/dist/semantic.min.js"></script>
+<script src="/javascripts/lib/jquery.datetimepicker.js"></script>
+<script src="/javascripts/lib/ol.js"></script>
+<script src="/javascripts/lib/d3.js"></script>
+<script src="/javascripts/lib/spin.min.js"></script>
+<script src="/javascripts/util.js"></script>
+<style>
+#progress {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 4px;
+	background: rgba(0,60,136,0.4);
+	width: 0;
+	transition: width 250ms;
+}
+
+</style>
+</head>
+<body  ondblclick="return false">
+<div class="body-wrapper">
+	<div id="map"></div>
+	<div id="progress"></div>
+
+	<div id="button-group" class="ui inverted segment">
+		<span class="ui button inverted green span modal-trigger" data-modal="#select-modal">select</span>
+		<span class="ui button inverted orange span" id="heatmap-trigger">Heat Map</span>
+		<span class="ui button inverted yellow span modal-trigger" data-modal="#piechart-modal">Pie Chart</span>
+		<span class="ui button inverted olive span modal-trigger" data-modal="#themeriver-modal">ThemeRiver</span>
+		<span class="ui button inverted red span upload">Upload</span>
+		<span class="ui button inverted teal span" id="select-beijing">Beijing</span>
+		<span class="ui button inverted blue span" id="select-shanghai">Shanghai</span>
+		<span class="ui button inverted violet span" id="zoom-in">Zoom in</span>
+		<span class="ui button inverted purple span" id="zoom-out">Zoom out</span>
+		<span class="ui button inverted pink span" id="pink">Pink</span>
+		<span class="ui button inverted brown span" id="dragbox">DragBox</span>
+		<span class="ui button inverted grey span">Grey</span>
+		<span class="ui button inverted black span">Black</span>
+	</div>
+
+	<div class="ui modal" id="select-modal">
+		<div class="header">
+			Select
+		</div>
+		<div class="container">
+			<div class="select-activity"></div>
+			<div class="ui horizontal divider">AND</div>
+			<div class="select-time">
+				<div class="ui left corner labeled input">
+				  <input id="start-time" class="time" type="text" placeholder="Start Time" value="2012-05-31 00:00">
+				  <div class="ui left corner label teal">
+				    <i class="wait icon"></i>
+				  </div>
+				</div>
+				<div class="ui left corner labeled input">
+				  <input id="end-time" class="time" type="text" placeholder="End Time" value="2012-06-14 00:00">
+				  <div class="ui left corner label teal">
+				    <i class="wait icon"></i>
+				  </div>
+				</div>
+				<span class="ui button inverted orange span" id="select-time-all">all</span>
+			</div>
+		</div>
+		<div class="actions">
+			<div class="ui buttons">
+			  <button class="ui button confirm">Confirm</button>
+			  <div class="or"></div>
+			  <button class="ui positive button search">Search</button>
+			</div>
+		</div>
+		</div>
+	</div>
+
+	<div class="ui basic modal" id="piechart-modal">
+		<div class="header">
+			<span class="piechart-header">PieChart</span>
+		</div>
+		<div class="container"></div>
+		<div class="actions">
+			<div class="ui buttons">
+			  <button class="ui positive button confirm close">close</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="ui basic modal" id="themeriver-modal">
+		<div class="header">
+			<span class="themeriver-header">ThemeRiver</span>
+			<div class="ui buttons switcher">
+			  <button id="axis-week" class="axis-switcher ui teal button">week</button>
+			  <div class="or"></div>
+			  <button id="axis-day" class="axis-switcher ui green button">day</button>
+			</div>
+			<span class="ui button inverted orange span active" id="brush-toggle">brush</span>
+			<span class="ui button inverted orange span basic" id="themeriver-trigger" style="display:none">themeriver</span>
+		</div>
+		<div class="container"></div>
+		<div class="actions">
+			<div class="ui buttons">
+			  <button class="ui positive button confirm close">close</button>
+			</div>
+		</div>
+		</div>
+	</div>
+
+	<div id="popup" class="ui segments"></div>
+	<div id="popup_chart"></div>
+	<div id="bar_chart" style="display:block"></div>
+	<input type="file" class="file-upload" style="display:none">
+</div>
+<script src="/javascripts/map.js"></script>
+<script src="/javascripts/init.js"></script>
+<script>
+$(function() {
+	init();
+});
+</script>
+
+</body>
+</html>
