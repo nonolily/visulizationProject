@@ -338,3 +338,44 @@ body{
   height: 28%;
   background-color: #eee;
 }
+
+.div-b {
+    position: absolute;
+    left: 200px;
+    top: 20px;
+    z-index: 100
+}
+
+.rotate-north {
+    left: .65em;
+    width: 90px;
+    text-align: center;
+}
+
+.ol-touch .rotate-north {
+    color: 'rgba(255, 255, 255, 1)';
+    text-align: center;
+}
+
+.all{
+    left: 373px;
+    opacity: 0.5;
+}
+
+.weekdays{
+    opacity: 0.5;
+    left: 250px;
+
+}
+
+.weekends{
+    opacity: 0.5;
+    left: 450px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
