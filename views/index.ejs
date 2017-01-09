@@ -4,50 +4,6 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
 
     <title>OpenStreetMap</title>
-    <style type="text/css">
-    .div-b {
-        position: absolute;
-        left: 200px;
-        top: 20px;
-        z-index: 100
-    }
-    
-    .rotate-north {
-        left: .65em;
-        width: 90px;
-        text-align: center;
-    }
-
-    .ol-touch .rotate-north {
-        color: 'rgba(255, 255, 255, 1)';
-        text-align: center;
-    }
-
-    .all{
-        left: 373px;
-        opacity: 0.5;
-    }
-
-    .weekdays{
-        opacity: 0.5;
-        left: 250px;
-
-    }
-
-    .weekends{
-        opacity: 0.5;
-        left: 450px;
-    }
-
-    .axis path,
-    .axis line {
-      fill: none;
-      stroke: #000;
-      shape-rendering: crispEdges;
-    }
-
-    </style>
-
     <link rel="stylesheet" type="text/css" href="/bower_components/semantic/dist/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/lib/ol.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/lib/jquery.datetimepicker.css">
@@ -164,82 +120,8 @@
                 <input id="checkPlaces" class="submit_btn" type='button' value='Check the places' onclick="" />
             </div>
         </div>
-
-
     </div>
-    <!--<div class="part-below">-->
-
-        <!--<div class="below_line"></div>-->
-    <!--</div>-->
 </div>
-<!-- <div id="content" class="main-content">
-    <div class="part-above clearfix">
-        <div id="sidebar" CLASS="side-bar">
-            <div id="sidebar_content" class="sidebar-content">
-                <ul>
-                    <li class="car_label_box">
-                        <div class="car_list_title">Region View</div>
-                        <div class="car_list_box">
-                            <div class="input_place clearfloat">
-                                <div class="input_title">car label</div>
-                                <input placeholder="taxi label" name="KProvince" id="KProvince" />
-                                <input class="submit_btn" type='button' value='Submit' id = 'submit'/>
-                            </div>
-                            <div id="search_suggest" class="search-suggest" style=" "></div>
-                            <div id="sidebar_loader" style="display: none;">
-                                <img alt="Loading..." class="loader" src="/img/image/searching.gif">
-                            </div>
-                            <div id="car_date" class="car_date" align='center'></div>
-                            <div id="readMe">
-                                If you input 'A', you can see the car labels which contain letter 'A'.<br/>
-                                Then click the car label and the submit button.
-                            </div>
-                        </div>
-                    </li>
-                    <li class="place_box">
-                        <div class="place_list_title">Road View</div>
-                        <div class="road_view_title"><span>Choose car labels:</span></div>
-                        <div id="carLabelList"></div>
-                        <div class="road_view_title"><span>Choose places:</span></div>
-                        <div class="place_list_box">
-                            <ul>
-                                <li>
-                                    <input type="checkbox" name="check" value="check" id="checkBox1"/><label for="checkBox1">Chunxi Road</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" name="check" value="check" id="checkBox2"/><label for="checkBox2">North Station</label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" name="check" value="check" id="checkBox3"/><label for="checkBox3">East Station</label>
-                                </li>
-                            </ul>
-                            <div>
-                                <input class="submit_btn" type='button' value='Check the places' onclick="" />
-                            </div>
-                        </div>
-                    </li>
-                    <li class="show_poi">
-                        <div class="place_list_title">Poi View</div>
-                        <div class="show_poi_btn"><a href="">Show All Poi</a></div>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-
-        <div id="map" tabindex="2" class="div-a leaflet-container leaflet-fade-anim">
-        </div>
-
-        <div id="map2" tabindex="2" class="div-a-2 leaflet-container leaflet-fade-anim">
-        </div>
-
-
-    </div>
-    <div class="part-below">
-        <div class="below_chord"></div>
-        <div class="below_line"></div>
-    </div>
-</div> -->
 <script type="text/javascript" src="/javascripts/index.js"></script>
 <script src="/javascripts/trafficStatistics.js" type="text/javascript"></script>
 </body>
